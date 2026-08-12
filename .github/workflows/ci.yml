@@ -48,7 +48,7 @@ jobs:
       - run: python tools/release_audit.py --version v0.1.0
       - run: python -m build
       - run: python -m pepper_pet.cli package --repo-root . --out-dir dist --version v0.1.0 --json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: pepper-release-candidate
           path: |
