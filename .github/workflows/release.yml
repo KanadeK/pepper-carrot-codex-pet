@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m ruff check .
+      - run: python -m pytest --cov=pepper_pet --cov-report=term-missing --cov-fail-under=90
+      - run: python -m pepper_pet.cli validate pet --json
+      - run: python tools/write_provenance.py --check
+      - run: python tools/update_checksums.py --check
+      - run: python tools/sync_site_asset.py --check
+      - run: python tools/preflight.py --version "$GITHUB_REF_NAME"
+      - run: python tools/release_audit.py --version "$GITHUB_REF_NAME"
+      - run: python -m build
+      - run: python -m pip install --force-reinstall --no-deps dist/*.whl
+      - run: pepper-pet --version
+      - run: python -m pepper_pet.cli package --repo-root . --out-dir dist --version "$GITHUB_REF_NAME" --json
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "$GITHUB_REF_NAME"
+          dist/pepper-carrot-codex-pet-"$GITHUB_REF_NAME".zip
+          dist/release-manifest.json
+          dist/SHA256SUMS
+          dist/*.whl
+          dist/*.tar.gz
+          --verify-tag
+          --notes-file RELEASE_NOTES.md
+          --title "Pepper for Codex $GITHUB_REF_NAME"

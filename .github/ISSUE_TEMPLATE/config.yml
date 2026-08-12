@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/KanadeK/pepper-carrot-codex-pet/security/advisories/new
+    about: Report installer or path-handling vulnerabilities privately.
+  - name: Pepper&Carrot project
+    url: https://www.peppercarrot.com/
+    about: Visit the source webcomic. This pet repository is independent.

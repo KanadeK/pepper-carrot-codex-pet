@@ -1,0 +1,39 @@
+name: Animation feedback
+description: Report a specific pose, direction, clipping, or identity problem.
+title: "[Animation] "
+labels: ["animation"]
+body:
+  - type: dropdown
+    id: state
+    attributes:
+      label: State
+      options:
+        - Idle
+        - Running right
+        - Running left
+        - Waving
+        - Jumping
+        - Failed
+        - Waiting
+        - Working
+        - Review
+        - Look directions
+    validations:
+      required: true
+  - type: input
+    id: frame
+    attributes:
+      label: Frame or direction
+      placeholder: Frame 3 or 270 degrees
+  - type: textarea
+    id: problem
+    attributes:
+      label: Visual problem
+      description: Describe what is wrong at normal desktop-pet size.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Attach a screenshot if it does not contain private desktop data.

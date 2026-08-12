@@ -1,0 +1,78 @@
+{
+  "artwork_license": "CC-BY-4.0",
+  "attribution": "Pepper and source artwork by David Revoy. Codex pet adaptation by KanadeK. Licensed under CC BY 4.0.",
+  "changes": [
+    "compact animation-friendly mascot proportions",
+    "sticker-style shape and palette simplification",
+    "new task-state and gaze poses",
+    "blue chroma-key extraction and alpha cleanup",
+    "Codex v2 frame registration and atlas assembly"
+  ],
+  "character": "Pepper",
+  "chroma_key": "#0000FF",
+  "generation_workflow": "Codex hatch-pet v2 with grounded image generation, isolated row review, chroma-key removal, and deterministic assembly",
+  "look_direction_order": [
+    "000",
+    "022.5",
+    "045",
+    "067.5",
+    "090",
+    "112.5",
+    "135",
+    "157.5",
+    "180",
+    "202.5",
+    "225",
+    "247.5",
+    "270",
+    "292.5",
+    "315",
+    "337.5"
+  ],
+  "project_relationship": "Independent derivative fan project; not endorsed by David Revoy or the Pepper&Carrot project.",
+  "references": [
+    {
+      "creator": "David Revoy",
+      "date": "2015-06-28",
+      "local_path": "artwork/references/pepper-2015-cc-by-4.0.jpg",
+      "sha256": "47d10c7072a4c7b2496b6fac1a3547cc9597c17c1198917de6f4271a6cad5fdf",
+      "title": "Pepper from Pepper&Carrot",
+      "url": "https://commons.wikimedia.org/wiki/File:Pepper_from_Pepper%26Carrot.jpg"
+    },
+    {
+      "creator": "David Revoy",
+      "date": "2017-08-06",
+      "local_path": "artwork/references/pepper-model-sheet-2017-cc-by-4.0.jpg",
+      "sha256": "47b32353a7d50f2dfa048de16a38d5ebe08aaa0380cb88e39f7134279510e9b3",
+      "title": "Pepper's model sheet",
+      "url": "https://www.peppercarrot.com/sb/viewer/sketchbook-src__2017-08-06_Pepper_s-model-sheet_by-David-Revoy.html"
+    }
+  ],
+  "schema_version": 1,
+  "source_corrections": [
+    "Willem Sonke",
+    "Moini",
+    "Hali",
+    "CGand",
+    "Alex Gryson"
+  ],
+  "source_creator": "David Revoy",
+  "source_universe": "Hereva, created by David Revoy with contributions by Craig Maloney",
+  "source_work": "Pepper&Carrot",
+  "spritesheet": {
+    "animation_cells": 73,
+    "cell_height": 208,
+    "cell_width": 192,
+    "columns": 8,
+    "format": "WEBP",
+    "height": 2288,
+    "neutral_look_cells": 1,
+    "path": "pet/spritesheet.webp",
+    "reserved_empty_cells": 14,
+    "rows": 11,
+    "sha256": "cf0f16f906762f9fb710f4a7970cd15d908772c1bf83d9c16543a4d8b6a7d627",
+    "sprite_version_number": 2,
+    "used_cells": 74,
+    "width": 1536
+  }
+}

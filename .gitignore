@@ -1,0 +1,15 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test-tmp/
+.coverage
+coverage.xml
+htmlcov/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+artwork/hatch-run/
+site/generated/

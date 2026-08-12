@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Install Pepper from the libre webcomic Pepper&Carrot as a validated Codex v2 desktop pet."
+    >
+    <meta name="theme-color" content="#a0442f">
+    <meta property="og:title" content="Pepper for Codex">
+    <meta
+      property="og:description"
+      content="A real 11-row Codex pet with safe installation, diagnosis, and repair."
+    >
+    <meta property="og:type" content="website">
+    <meta
+      property="og:url"
+      content="https://kanadek.github.io/pepper-carrot-codex-pet/"
+    >
+    <title>Pepper for Codex</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Pepper for Codex home">
+        <span>Pepper</span>
+        <small>for Codex</small>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#preview">Preview</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#license">License</a>
+        <a
+          href="https://github.com/KanadeK/pepper-carrot-codex-pet"
+          rel="noreferrer"
+        >GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Pepper&Carrot fan project</p>
+          <h1>Pepper joins Codex.</h1>
+          <p class="hero-summary">
+            Pepper animates real task states, installs with checksums, and repairs
+            herself without deleting the previous copy.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="codex://pets/install?name=Pepper%20%7C%20Pepper%26Carrot&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKanadeK%2Fpepper-carrot-codex-pet%2Fmain%2Fpet%2Fspritesheet.webp&amp;spriteVersionNumber=2"
+            >Install Pepper</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/KanadeK/pepper-carrot-codex-pet"
+            >View source</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="preview-stage preview-stage-hero" aria-label="Animated Pepper preview">
+            <canvas
+              class="pet-canvas"
+              width="384"
+              height="416"
+              data-pet-canvas
+              aria-label="Pepper idle animation"
+              role="img"
+            ></canvas>
+            <p class="preview-status" data-preview-status aria-live="polite">
+              Loading the installable atlas...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="evidence" aria-labelledby="evidence-title">
+        <div class="evidence-lead">
+          <h2 id="evidence-title">Every frame has a job.</h2>
+          <p>
+            The validator reads the shipped WebP, checks every required cell, and
+            rejects leaked color-key pixels or occupied reserve slots.
+          </p>
+        </div>
+        <dl class="evidence-grid">
+          <div class="metric metric-major">
+            <dt>Animated cells</dt>
+            <dd>73</dd>
+            <p>Nine task states plus a 16-direction look loop, with one extra v2 pointer-neutral cell.</p>
+          </div>
+          <div class="metric">
+            <dt>Atlas</dt>
+            <dd>1536 x 2288</dd>
+            <p>Eight columns, eleven rows, fixed 192 x 208 cells.</p>
+          </div>
+          <div class="metric">
+            <dt>Release builds</dt>
+            <dd>2 identical</dd>
+            <p>Separate archives must match byte for byte.</p>
+          </div>
+        </dl>
+      </section>
+
+      <section class="preview-lab" id="preview" aria-labelledby="preview-title">
+        <div class="section-heading">
+          <p class="section-label">Live atlas</p>
+          <h2 id="preview-title">Try every shipped state.</h2>
+          <p>
+            This canvas reads the same spritesheet installed by Codex. Choose a
+            state to inspect its real frame sequence.
+          </p>
+        </div>
+        <div class="lab-layout">
+          <div class="preview-stage preview-stage-lab">
+            <canvas
+              class="pet-canvas"
+              width="384"
+              height="416"
+              data-pet-canvas
+              aria-label="Pepper state animation"
+              role="img"
+            ></canvas>
+            <div class="frame-readout" aria-live="polite">
+              <strong data-state-name>Idle</strong>
+              <span data-frame-readout>Frame 1 of 6</span>
+            </div>
+          </div>
+          <div class="state-panel">
+            <div
+              class="state-controls"
+              data-state-controls
+              aria-label="Animation states"
+            ></div>
+            <p class="state-help">
+              Reduced-motion settings keep Pepper on the first idle frame.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolkit" id="toolkit" aria-labelledby="toolkit-title">
+        <div class="toolkit-copy">
+          <h2 id="toolkit-title">Safe to install. Easy to recover.</h2>
+          <p>
+            The command-line tool validates a staged copy before the current pet
+            moves. Every replacement and uninstall preserves a timestamped backup.
+          </p>
+          <div class="command-block">
+            <code>pepper-pet doctor --source pet --json</code>
+            <button type="button" data-copy-command>Copy command</button>
+          </div>
+          <p class="copy-feedback" data-copy-feedback aria-live="polite"></p>
+        </div>
+        <div class="recovery-flow" aria-label="Installation recovery flow">
+          <article>
+            <h3>Validate</h3>
+            <p>Check manifest, dimensions, alpha coverage, reserve cells, and color key.</p>
+          </article>
+          <article>
+            <h3>Back up</h3>
+            <p>Move the previous pet into a uniquely named recovery directory.</p>
+          </article>
+          <article>
+            <h3>Replace</h3>
+            <p>Promote the verified staging directory with a same-volume move.</p>
+          </article>
+          <article>
+            <h3>Diagnose</h3>
+            <p>Compare installed files with the trusted source and repair only when needed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="license-story" id="license" aria-labelledby="license-title">
+        <figure>
+          <img
+            src="assets/pepper-reference.jpg"
+            width="693"
+            height="782"
+            loading="lazy"
+            alt="Pepper in her tall curled witch hat, illustrated by David Revoy"
+          >
+          <figcaption>
+            Pepper artwork by David Revoy, CC BY 4.0
+          </figcaption>
+        </figure>
+        <div>
+          <h2 id="license-title">A real character with reusable source files.</h2>
+          <p>
+            Pepper comes from David Revoy's libre webcomic. The official model
+            sheet and source artwork allow adaptation and redistribution with
+            attribution.
+          </p>
+          <div class="text-links">
+            <a
+              href="https://www.peppercarrot.com/sb/viewer/sketchbook-src__2017-08-06_Pepper_s-model-sheet_by-David-Revoy.html"
+            >Open the model sheet</a>
+            <a
+              href="https://www.peppercarrot.com/jb/documentation/120_License_best_practices.html"
+            >Read the license guide</a>
+            <a
+              href="https://github.com/KanadeK/pepper-carrot-codex-pet/blob/main/NOTICE.md"
+            >View full attribution</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <h2 id="closing-title">Bring Pepper into your next task.</h2>
+        <p>
+          Install the pet, inspect the source, or fork the animation pipeline.
+        </p>
+        <div class="closing-actions">
+          <a
+            class="button button-primary"
+            href="codex://pets/install?name=Pepper%20%7C%20Pepper%26Carrot&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKanadeK%2Fpepper-carrot-codex-pet%2Fmain%2Fpet%2Fspritesheet.webp&amp;spriteVersionNumber=2"
+          >Install Pepper</a>
+          <a
+            href="https://github.com/KanadeK/pepper-carrot-codex-pet/blob/main/README.zh-CN.md"
+          >中文说明</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Pepper character and source art: David Revoy, CC BY 4.0. Tooling: MIT.
+      </p>
+      <a href="https://www.peppercarrot.com/">Read Pepper&Carrot</a>
+    </footer>
+  </body>
+</html>

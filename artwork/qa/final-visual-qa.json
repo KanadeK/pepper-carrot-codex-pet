@@ -1,0 +1,29 @@
+{
+  "visual_qa": "pass",
+  "qa_note": "All 11 rows preserve Pepper's identity and state semantics with clean unclipped sprites, readable gait and idle motion, stable scale and baseline, and passing cardinal direction gates.",
+  "direction_semantics": {
+    "000": "pass",
+    "022.5": "pass",
+    "045": "warning",
+    "067.5": "warning",
+    "090": "pass",
+    "112.5": "warning",
+    "135": "warning",
+    "157.5": "warning",
+    "180": "pass",
+    "202.5": "pass",
+    "225": "pass",
+    "247.5": "pass",
+    "270": "pass",
+    "292.5": "warning",
+    "315": "warning",
+    "337.5": "warning"
+  },
+  "review_warnings": [
+    "Blind vertical ambiguity at 045, 067.5, 112.5, 135, 292.5, 315, and 337.5 is accepted because labeled normal-size review confirms each axis with no reversal.",
+    "157.5 retains only a subtle right cue near 180.",
+    "Continuity outliers at 157.5->180 and 337.5->000, including the 1.27 area ratio, are accepted because no visible snap, registration jump, scale pop, or baseline pop occurs."
+  ],
+  "repair_rows": [],
+  "repair_notes": null
+}

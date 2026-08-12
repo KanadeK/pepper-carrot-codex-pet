@@ -1,0 +1,153 @@
+{
+  "ok": true,
+  "reviewed_by": "independent-visual-qa",
+  "source": "qa/look-directions.png",
+  "blind_validation": "qa/direction-blind-validation.json",
+  "continuity": "qa/look-continuity.json",
+  "directions": [
+    {
+      "direction": "000",
+      "verdict": "pass",
+      "expected": "up",
+      "observed": "up",
+      "horizontal_evidence": "No horizontal axis is required for this cardinal.",
+      "vertical_evidence": "Lifted face and pupils clearly point toward the top edge.",
+      "reason": "The up cardinal is unmistakable at normal pet size and passed the blind hard gate."
+    },
+    {
+      "direction": "022.5",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "up-right",
+      "horizontal_evidence": "The lifted gaze and face shift slightly toward screen-right.",
+      "vertical_evidence": "The chin, face, and gaze remain clearly raised.",
+      "reason": "The first clockwise intermediate advances naturally from 000 into the upper-right quadrant."
+    },
+    {
+      "direction": "045",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "up-right",
+      "horizontal_evidence": "A clear three-quarter head turn exposes the screen-right face side.",
+      "vertical_evidence": "Raised gaze and face pitch remain visible in labeled loop review.",
+      "reason": "Blind vertical classification was ambiguous, but labeled normal-size review confirms the intended quadrant with no reversal."
+    },
+    {
+      "direction": "067.5",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "up-right",
+      "horizontal_evidence": "The near-profile nose and face point strongly toward screen-right.",
+      "vertical_evidence": "The eye line and face remain raised relative to 090.",
+      "reason": "Blind vertical classification was ambiguous, but the labeled ordered arc remains clearly upper-right."
+    },
+    {
+      "direction": "090",
+      "verdict": "pass",
+      "expected": "right",
+      "observed": "right",
+      "horizontal_evidence": "The nose, pupils, and profile point unmistakably toward the screen-right edge.",
+      "vertical_evidence": "No vertical axis is required for this cardinal.",
+      "reason": "The right cardinal passed the blind horizontal hard gate."
+    },
+    {
+      "direction": "112.5",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "down-right",
+      "horizontal_evidence": "The nose and exposed face surface stay on the screen-right side.",
+      "vertical_evidence": "The chin and eye line begin lowering from the 090 profile.",
+      "reason": "Blind vertical classification was ambiguous, but labeled loop review confirms the intended down-right transition."
+    },
+    {
+      "direction": "135",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "down-right",
+      "horizontal_evidence": "The three-quarter face and nose remain visibly screen-right.",
+      "vertical_evidence": "The face and gaze are pitched downward beneath the brim.",
+      "reason": "Blind vertical classification was ambiguous, but labeled normal-size evidence confirms the down-right quadrant."
+    },
+    {
+      "direction": "157.5",
+      "verdict": "warning",
+      "expected": "down-right",
+      "observed": "down-right with subtle horizontal cue",
+      "horizontal_evidence": "A residual screen-right three-quarter cue remains, though it is subtle near 180.",
+      "vertical_evidence": "The lowered face and gaze make the down axis unmistakable.",
+      "reason": "Accepted warning: the pose naturally approaches the down cardinal without crossing into the left half or reversing."
+    },
+    {
+      "direction": "180",
+      "verdict": "pass",
+      "expected": "down",
+      "observed": "down",
+      "horizontal_evidence": "No horizontal axis is required for this cardinal; the face remains broadly frontal.",
+      "vertical_evidence": "Both eyes are open, the pupils sit low, and the pitched face clearly points toward the bottom edge.",
+      "reason": "The down cardinal reads as looking down rather than asleep, bowing, or front-facing and passed the blind vertical hard gate."
+    },
+    {
+      "direction": "202.5",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "down-left",
+      "horizontal_evidence": "The face begins turning toward screen-left immediately after 180.",
+      "vertical_evidence": "The lowered gaze and face retain a strong down cue.",
+      "reason": "The pose enters the lower-left quadrant without reversing into the right half."
+    },
+    {
+      "direction": "225",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "down-left",
+      "horizontal_evidence": "The three-quarter nose and face point clearly toward screen-left.",
+      "vertical_evidence": "The head and gaze remain visibly lowered.",
+      "reason": "Both axes are readable and the pose advances evenly toward 270."
+    },
+    {
+      "direction": "247.5",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "down-left",
+      "horizontal_evidence": "The near-profile face points strongly toward screen-left.",
+      "vertical_evidence": "A remaining lowered face/gaze cue distinguishes it from 270.",
+      "reason": "The intended quadrant is clear in blind horizontal and labeled vertical review."
+    },
+    {
+      "direction": "270",
+      "verdict": "pass",
+      "expected": "left",
+      "observed": "left",
+      "horizontal_evidence": "The nose, pupils, face, and profile point unmistakably toward the screen-left edge.",
+      "vertical_evidence": "No vertical axis is required for this cardinal.",
+      "reason": "The left cardinal passed the blind horizontal hard gate."
+    },
+    {
+      "direction": "292.5",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "up-left",
+      "horizontal_evidence": "The face and profile remain strongly screen-left.",
+      "vertical_evidence": "The gaze begins lifting from the 270 profile in labeled loop review.",
+      "reason": "Blind vertical classification was ambiguous, but the labeled sequence confirms a coherent upper-left transition."
+    },
+    {
+      "direction": "315",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "up-left",
+      "horizontal_evidence": "The three-quarter face and nose remain visibly screen-left.",
+      "vertical_evidence": "The eyes and face are raised toward the top edge.",
+      "reason": "Blind vertical classification was ambiguous, but labeled normal-size review confirms the upper-left quadrant with no reversal."
+    },
+    {
+      "direction": "337.5",
+      "verdict": "warning",
+      "expected": "up-left",
+      "observed": "near-up with a strong left cue",
+      "horizontal_evidence": "The nose and face remain screen-left rather than crossing to the right half.",
+      "vertical_evidence": "The face visibly lifts toward 000, though blind vertical review was ambiguous.",
+      "reason": "Accepted warning: labeled loop review confirms an upward transition into 000 without reversal; the 1.27 area ratio reflects a wider frontal 000 silhouette without a visible height or baseline pop."
+    }
+  ]
+}

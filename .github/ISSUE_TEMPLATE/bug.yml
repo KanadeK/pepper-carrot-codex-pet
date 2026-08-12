@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a validator, installer, repair, preview, or packaging defect.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include secrets or private filesystem details. For security issues,
+        use private vulnerability reporting instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Pet animation
+        - Validation
+        - Installation or repair
+        - Release package
+        - Preview site
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Include the command and its sanitized output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Release or commit
+      placeholder: v0.1.0 or a commit SHA
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Windows 11, Python 3.12, Codex desktop version
+    validations:
+      required: true
